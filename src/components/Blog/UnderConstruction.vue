@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 
-const line1 = "&lt;Insert Cricket Noises&gt; Uh oh nothing here yet\n"
-const line2 = "some new exciting blogs coming soon\n"
+const line1 = "&lt;Insert Cricket Noises&gt; Uh-oh, nothing here yet.\n"
+const line2 = "Some exciting new blogs are coming soon!\n"
 
 const fullText = line1 + line2
 

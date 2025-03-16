@@ -21,7 +21,7 @@ const firstLine = "About me\n"
 const secondLine = "I am a DevOps Engineer from India\n"
 const thirdLine = "// I'm currently a Masters student at the George Washington University In Washington DC\n"
 const fourthLine =
-  "In my free time I love to play Video games [icon:gaming], go cycling [icon:cycle], hikes [icon:hiking], and I'm a gym freak [icon:gym]"
+  "In my free time I love to play Video games [icon:gaming], go cycling [icon:cycle], hike [icon:hiking], and I'm a gym freak [icon:gym]"
 
 const fullText = firstLine + secondLine + thirdLine + fourthLine
 
@@ -51,14 +51,14 @@ function delay(ms: number): Promise<void> {
 }
 
 async function runSequence() {
-  // Type lines in sequence
-  await typeString(typedText, firstLine, 60)
-  await delay(400)
-  await typeString(typedText, secondLine, 60)
-  await delay(400)
-  await typeString(typedText, thirdLine, 60)
-  await delay(400)
-  await typeString(typedText, fourthLine, 60)
+  // Immediately display the first line in full
+  typedText.value = firstLine;
+  await delay(400);
+  await typeString(typedText, secondLine, 60);
+  await delay(400);
+  await typeString(typedText, thirdLine, 60);
+  await delay(400);
+  await typeString(typedText, fourthLine, 60);
 }
 
 function skipAll() {
@@ -235,16 +235,19 @@ body.light-mode .work {
   }
 
   /* Adjust the 'work' section so it fits on mobile
-     - Remove absolute positioning and fixed width
-     - Center the content */
+     - Pin the work experience text to the bottom */
   .work {
-    position: static;
-    width: 100%;
-    margin-top: 12rem;
-    transform: none;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    font-family: monospace;
+    font-size: 1.6rem;
     text-align: center;
     border-bottom: 2px solid;
     padding-bottom: 0.5rem;
+    margin: 0;
   }
 }
 </style>

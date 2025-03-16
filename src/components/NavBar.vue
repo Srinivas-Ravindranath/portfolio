@@ -85,6 +85,7 @@ watch(isDark, (newVal) => {
   display: flex;
   margin: 0;
   padding: 0;
+  margin-left: 3em;
 }
 
 .nav-item {
@@ -104,10 +105,13 @@ watch(isDark, (newVal) => {
   transform: scale(1.05);
 }
 
-/* Optional styling for router-links */
+/* Updated styling for router-links */
 .nav-link {
   text-decoration: none;
   color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .nav-toggle-item {

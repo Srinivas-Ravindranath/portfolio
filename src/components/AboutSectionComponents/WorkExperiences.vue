@@ -31,29 +31,25 @@ const experiences = [
     title: 'DevOps Engineer',
     company: 'Syncron',
     date: 'Oct 2021 – Aug 2023',
-    summary: `Led the creation of reusable Terraform modules, boosted CI/CD performance with specialized EKS worker
-              nodes, and transformed Jenkins scripts into Python-based Jinja templates to cut pipeline runtimes by 35%.`
+    summary: `Led the development of reusable Terraform modules, boosting AWS infrastructure efficiency by 30%. Optimized GitHub CI pipelines with EKS clusters, enhancing processing speed by 15%. Transformed Jenkins workflows using Python Jinja templates, reducing runtime by 35%. Developed Python Tornado applications for automated cost-reporting and integrated real-time monitoring solutions (Grafana, Prometheus, AWS CloudWatch).`
   },
   {
     title: 'Associate DevOps Engineer',
     company: 'Syncron',
     date: 'Mar 2021 – Aug 2021',
-    summary: `Enhanced SFTP security with IP whitelisting (slashing intrusions by 80%), oversaw AWS resource optimization,
-              and automated routine tasks in Python/Shell to streamline daily operations.`
+    summary: `Enhanced infrastructure security by implementing IP whitelisting, reducing unauthorized access by 80%. Managed AWS resource optimization, achieving a 10% cost reduction. Automated infrastructure provisioning and CI/CD workflows using Jenkins, Python, and Shell scripts. Strengthened pipeline security and streamlined operational efficiency across multiple AWS accounts.`
   },
   {
     title: 'DevOps Intern',
     company: 'Syncron',
     date: 'Sep 2020 – Feb 2021',
-    summary: `Implemented AWS CloudWatch Insights for real-time SFTP server monitoring (cut incident response by 40%),
-              automated Terraform/Jenkins pipelines, and built Python scripts for internal reporting.`
+    summary: `Implemented AWS CloudWatch Insights for comprehensive server monitoring, improving incident response times by 40%. Developed Python scripts for automating customer metadata reporting with DynamoDB integration. Maintained efficient Terraform scripts and Jenkins pipelines for AWS infrastructure provisioning.`
   },
   {
     title: 'Cloud Developer Intern',
     company: 'Pace Wisdom',
     date: 'Jun 2019 – Jul 2019',
-    summary: `Created a self-service Python tool that tapped into AWS accounts to reveal vital EC2, Lambda, S3, and RDS info,
-              vastly improving multi-account visibility.`
+    summary: `Built a centralized Python-based application for AWS service discovery, facilitating seamless information retrieval from AWS APIs including EC2, Lambda, Elastic Beanstalk, and more, significantly enhancing operational self-service capabilities.`
   }
 ]
 
@@ -134,5 +130,12 @@ onMounted(() => {
   font-size: 1rem;
   margin: 0;
   line-height: 1.4;
+}
+
+@media screen and (max-width: 480px) {
+  .experience-section {
+    width: 100%;
+    margin: 2rem 1.5rem;
+  }
 }
 </style>
