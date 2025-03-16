@@ -269,14 +269,6 @@ body.light-mode .portfolio {
     min-height: 70vh;
   }
 
-  /* Make sure the typed text area fits well on narrow devices */
-  .text-container {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 0 1rem; /* optional side padding */
-  }
-
   /* Adjust the large typewriter text for small screens */
   .typewriter {
     font-size: 2rem; /* slightly smaller so it doesn’t wrap awkwardly */
@@ -288,14 +280,19 @@ body.light-mode .portfolio {
     font-size: 1.4rem;
   }
 
-  /* Let the portfolio section shrink to fit */
+  /* Update the portfolio section to be fixed at the bottom */
   .portfolio {
-    width: auto;
-    margin: 12rem auto 0;
-    padding-bottom: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    font-family: monospace;
+    font-size: 1.3rem;
     text-align: center;
-    margin-left: 1em;
-    display: block;
+    border-bottom: 2px solid;
+    padding-bottom: 0.5rem;
+    margin: 0;
   }
 }
 
