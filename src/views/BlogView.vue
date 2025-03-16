@@ -3,8 +3,7 @@
     <NavBar />
 
     <main>
-      <HeaderViewView />
-      <WorkExperiences />
+      <UnderConstruction />
     </main>
 
   </div>
@@ -12,12 +11,12 @@
 
 <script setup lang="ts">
 import NavBar from '@/components/NavBar.vue'
-import HeaderViewView from '@/components/AboutSectionComponents/HeaderView.vue'
-import WorkExperiences from '@/components/AboutSectionComponents/WorkExperiences.vue'
+import UnderConstruction from '@/components/Blog/UnderConstruction.vue'
 
 </script>
 
 <style scoped>
+/* Add any styles specific to the HomeView layout here */
 .home-view {
   /* optional styling */
 }
