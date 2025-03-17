@@ -52,7 +52,7 @@ function delay(ms: number): Promise<void> {
 
 async function runSequence() {
   // Immediately display the first line in full
-  typedText.value = firstLine;
+  await typeString(typedText, firstLine, 60)
   await delay(400);
   await typeString(typedText, secondLine, 60);
   await delay(400);
@@ -71,10 +71,10 @@ function skipAll() {
 const typedTextFormatted = computed(() => {
   return typedText.value
     .split('\n')
-    .map(line => {
+    .map((line, index) => {
       let formattedLine = line.trimEnd()
 
-      if (formattedLine.startsWith("About me")) {
+      if (index === 0) {
         formattedLine = `<span class="header-line-about">${formattedLine}</span>`
       } else if (formattedLine.startsWith("//")) {
         formattedLine = `<span class="comment-line-about">${formattedLine}</span>`
@@ -220,7 +220,7 @@ body.light-mode .work {
 
   /* Make the text container take full width and add horizontal padding */
   .text-container-about {
-    width: 100%;
+    width: 95%;
     padding: 0 1rem;
     margin: 0 auto;
   }
@@ -238,10 +238,10 @@ body.light-mode .work {
      - Pin the work experience text to the bottom */
   .work {
     position: absolute;
-    bottom: 1rem;
-    left: 50%;
+    bottom: 4rem;
+    left: 47%;
     transform: translateX(-50%);
-    width: 400px;
+    width: 350px;
     font-family: monospace;
     font-size: 1.6rem;
     text-align: center;

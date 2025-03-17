@@ -143,6 +143,7 @@ onMounted(() => {
 .hero-container {
   min-height: 100vh;
   /* Background and text color will be inherited from global theme classes */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,6 +261,7 @@ body.light-mode .portfolio {
   height: auto !important;
 }
 
+
 @media screen and (max-width: 480px) {
   /* Give the hero container a little breathing room on small screens */
   .hero-container {
@@ -283,7 +285,7 @@ body.light-mode .portfolio {
   /* Update the portfolio section to be fixed at the bottom */
   .portfolio {
     position: absolute;
-    bottom: 1rem;
+    bottom: 0.1rem;
     left: 50%;
     transform: translateX(-50%);
     width: 350px;

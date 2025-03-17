@@ -134,8 +134,8 @@ onMounted(() => {
 
 @media screen and (max-width: 480px) {
   .experience-section {
-    width: 100%;
-    margin: 2rem 1.5rem;
+    width: 93%;
+    margin: 0.1rem 1.3rem;
   }
 }
 </style>
