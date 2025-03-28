@@ -9,7 +9,7 @@
         <p v-if="showSecondLine" class="second-line">
           I am a
           <span class="variant-part">{{ currentVariant }}</span>
-          Enthusiast
+          Specialist
         </p>
       </div>
     </div>

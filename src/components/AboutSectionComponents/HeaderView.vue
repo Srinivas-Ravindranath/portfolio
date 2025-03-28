@@ -18,7 +18,7 @@ import { ref, computed, onMounted } from 'vue'
 
 
 const firstLine = "About me\n"
-const secondLine = "I am a DevOps Engineer from India\n"
+const secondLine = "I am a DevOps Engineer from DC\n"
 const thirdLine = "// I'm currently a Masters student at the George Washington University In Washington DC\n"
 const fourthLine =
   "In my free time I love to play Video games [icon:gaming], go cycling [icon:cycle], hike [icon:hiking], and I'm a gym freak [icon:gym]"

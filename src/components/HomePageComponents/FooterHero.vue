@@ -82,11 +82,11 @@ onMounted(() => {
 }
 
 .footer-hero {
-  margin-left: 16rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  /* Remove auto centering, and reduce left padding */
+  margin: 2rem 0 1rem 0;
+  max-width: 900px;
+  padding-left: 1rem;
   text-align: left;
-  /* Removed color: #fff so it can inherit from global theme */
   font-family: monospace;
   font-size: 2.5rem;
   font-weight: 900;
@@ -119,7 +119,6 @@ onMounted(() => {
   margin-top: 1rem;
   margin-bottom: 2rem;
   text-align: left;
-  /* Removed color: #fff so it can inherit from global theme */
   font-family: monospace;
   font-size: 1.4rem;
 }

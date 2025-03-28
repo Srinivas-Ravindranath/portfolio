@@ -89,6 +89,7 @@ onMounted(() => {
   padding-bottom: 2rem;
   border-bottom: 2px solid currentColor;
   margin-bottom: 2rem;
+  margin-left: 4%;
 }
 
 
