@@ -16,14 +16,15 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 
+let skipRequested = false;
 
 const firstLine = "About me\n"
-const secondLine = "I am a DevOps Engineer from India\n"
+const secondLine = "I am a DevOps Engineer from DC\n"
 const thirdLine = "// I'm currently a Masters student at the George Washington University In Washington DC\n"
 const fourthLine =
   "In my free time I love to play Video games [icon:gaming], go cycling [icon:cycle], hike [icon:hiking], and I'm a gym freak [icon:gym]"
 
-const fullText = firstLine + secondLine + thirdLine + fourthLine
+const fullText = firstLine + secondLine + thirdLine + fourthLine;
 
 
 const typedText = ref("")
@@ -51,17 +52,25 @@ function delay(ms: number): Promise<void> {
 }
 
 async function runSequence() {
+  skipRequested = false;
   // Immediately display the first line in full
   typedText.value = firstLine;
   await delay(400);
+  if (skipRequested) { return; }
   await typeString(typedText, secondLine, 60);
+  if (skipRequested) { return; }
   await delay(400);
+  if (skipRequested) { return; }
   await typeString(typedText, thirdLine, 60);
+  if (skipRequested) { return; }
   await delay(400);
+  if (skipRequested) { return; }
   await typeString(typedText, fourthLine, 60);
+  if (skipRequested) { return; }
 }
 
 function skipAll() {
+  skipRequested = true;
   activeIntervals.forEach(id => clearInterval(id))
   activeIntervals = []
   typedText.value = fullText

@@ -41,7 +41,7 @@ const projects = ref<Project[]>([
       { label: "Python", url: "https://github.com/Srinivas-Ravindranath/automation-demo/tree/main/python" },
       { label: "Jenkins", url: "https://github.com/Srinivas-Ravindranath/automation-demo/tree/main/jenkinsfiles" },
       { label: "Shell", url: "https://github.com/Srinivas-Ravindranath/automation-demo/tree/main/shell/PatchManager" },
-      { label: "Terraform", url: "https://github.com/Srinivas-Ravindranath/automation-demo/tree/main/python/Terraform" },
+      { label: "Terraform", url: "https://github.com/Srinivas-Ravindranath/automation-demo/tree/main/terraform" },
     ]
   },
   {
